@@ -1,0 +1,370 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+author: valdanito
+time:2016-06-29
+*/
+
+/*Colors*/
+@bgColor: #f8f8f8;
+@subTitle: #9b9b9b;
+@textColor: #353535;
+
+/*Imgs*/
+@images: "../imgs";
+
+.bgSize(@width; @height) {
+	/*背景图像尺寸*/
+	-webkit-background-size: @arguments;
+	-moz-background-size: @arguments;
+	background-size: @arguments;
+}
+
+/*Fonts*/
+.fontStyle(@font; @weight; @size:16px) {
+	font-family: @font, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+	font-weight: @weight;
+	font-size: @size;
+}
+
+/*Hide*/
+.hide{display: none;}
+
+/*Layout*/
+html, body {
+	height:100%;
+}
+
+.fl {float: left;}
+
+/*Style*/
+body {
+	font-size: 16px;
+	.fontStyle(PingFangSC-Light; lighter; 16px);
+	line-height: 1.62em;
+}
+
+h1 {
+	.fontStyle(PingFangSC-Semibold; 700; 48px);
+}
+
+#main {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: @bgColor;
+	min-height: 550px;
+	max-height: 715px;
+	background: url("@{images}/bgO@2x.png") center 170% no-repeat @bgColor;
+	.bgSize(284px; 378px);
+	
+	header {
+		height: 86px;
+		padding: 10px 1em;
+		z-index: 10;
+		position: relative;
+		
+		#logo {
+			display: block;
+			width: 224px;
+			height: 86px;
+			text-indent: -9999px;
+			background: url("@{images}/logo@2x.png") 0 0 no-repeat transparent;
+			.bgSize(224px; 86px);
+		}
+		
+		p {
+			line-height: 86px;
+			color: @subTitle;
+			.fontStyle(PingFangSC-Light; lighter; 14px);
+		}
+	}
+	
+	.intro {
+		width: 600px;
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		margin-left: -300px;
+		text-align: center;
+		
+		.title {
+			line-height: 1em;
+			margin-bottom: 0.5em;
+		}
+		
+		.slogan {
+			.fontStyle(PingFangSC-Thin; 400; 22px);
+			color: @textColor;
+		}
+	}/*END intro*/
+	
+	.iphoneBg {
+		z-index: 1;
+		position: absolute;
+		width: 716px;
+		height: 444px;
+		left: 50%;
+		margin-left:-910px; 
+		top:200px;
+		background: url("@{images}/iphoneBg@2x.png") 0 0 no-repeat transparent;
+		.bgSize(716px; 444px);
+		
+		
+		@keyframes cloudI {
+			from {top: 80px; }
+			to {top: 65px;}
+		}
+		
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 65px;
+			right: 280px;
+			width: 122px;
+			height: 74px;
+			background: url("@{images}/iphoneCloud@2x.png") 0 0 no-repeat;
+			.bgSize(122px,74px);
+			-webkit-animation: cloudI 3s linear 0s infinite alternate;
+			-moz-animation: cloudI 3s linear 0s infinite alternate;
+			animation: cloudI 3s linear 0s infinite alternate;
+		}
+	}/*END iphoneBg*/
+	
+	.androidBg {
+		z-index: 1;
+		position: absolute;
+		width: 610px;
+		height: 456px;
+		left: 50%;
+		margin-left: 55px;
+		top:-60px;
+		background: url("@{images}/androidBg@2x.png") 0 0 no-repeat transparent;
+		.bgSize(610px; 456px);
+		
+		@keyframes cloudA {
+			from {top: 90px; }
+			to {top: 110px;}
+		}
+		
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 90px;
+			right: 120px;
+			width: 114px;
+			height: 61px;
+			background: url("@{images}/androidCloud@2x.png") 0 0 no-repeat;
+			.bgSize(114px; 61px);
+			-webkit-animation: cloudA 3s linear 1s infinite alternate;
+			-moz-animation: cloudA 3s linear 1s infinite alternate;
+			animation: cloudA 3s linear 1s infinite alternate;
+		}
+		
+	}/*END androidBg*/
+	
+}/*END main*/
+
+#content {
+	position: relative;
+	max-width: 960px;
+	height: 480px;
+	margin: 0 auto;
+	
+	ul.featuresList {
+		overflow: hidden;
+		width: 100%;
+		margin: 80px 0 80px;
+	
+		li {
+			width: 25%;
+			display: block;
+			float: left;
+			text-align: center;
+			padding-top: 70px;
+			
+			h3 {
+				.fontStyle(PingFangSC-Medium; 700; 20px);
+				margin-bottom: 0.5em;
+			}
+			
+			p {
+				.fontStyle(PingFangSC-Light; lighter; 14px);
+				padding: 0 15px;
+				color: @textColor;
+				line-height: 1.5em;
+			}
+		}/*END li*/
+		
+		li.l1 {
+			background: url("@{images}/iconBolt@2x.png") center 0 no-repeat;
+			.bgSize(56px; 32px);
+		}
+		
+		li.l2 {
+			background: url("@{images}/iconPlatform@2x.png") center 0 no-repeat;
+			.bgSize(56px; 32px);
+		}
+		
+		li.l3 {
+			background: url("@{images}/iconRocket@2x.png") center 0 no-repeat;
+			.bgSize(56px; 32px);
+		}
+		
+		li.l4 {
+			background: url("@{images}/iconCloud@2x.png") center 0 no-repeat;
+			.bgSize(56px; 32px);
+		}
+	}/*END featureList*/
+	
+	a.applyBtn {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 185px;
+		height: 70px;
+		line-height: 70px;
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+		font-size: 20px;
+		
+		&:hover {
+			background-color: @textColor;
+		}
+	}
+	
+	footer {
+		width: 100%;
+		text-align: center;
+		color: @subTitle;
+		font-size: 14px;
+		position: absolute;
+		bottom: 20px;
+	}
+}/*END content*/
+
+/*mediaQuery*/
+.mediaQuery {
+#main {
+	min-height: 480px;
+	max-height: 640px;
+	background-position: center 300px;
+	  
+	header {
+		position: absolute;
+		z-index: 5;
+		padding:0;
+	  }
+	  
+	.intro {
+		width: 90%;
+		position: inherit;
+		margin: 0 auto;
+		left:inherit;
+		top: 35%;
+		margin:0 auto;
+		text-align: center;
+	
+		.title {
+			font-size: 30px;
+			margin-bottom: 0.2em;
+			}
+		.slogan {
+			font-size: 14px;
+			}
+		}/*END intro*/
+		.iphoneBg, .androidBg {
+			display: none;
+		} 
+}/*END main*/
+
+#content {
+	height: auto;
+
+	ul.featuresList {
+		margin: 30px 0 20px;
+		
+		li {
+			width: 100%;
+			padding-top: 50px;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+			border-bottom: 1px solid #f8f8f8;
+			
+			p {
+				font-size: 12px;
+			}
+		}	
+	}
+	
+	footer {
+		width:90%; 
+		position: inherit;
+		bottom: inherit;
+		margin: 0 auto;
+		padding: 50px 0 30px;
+		font-size: 12px;
+		line-height: 1.5em;
+	}
+}/*END content*/
+}/*END mediaQuery*/
+
+/*Responsive*/
+@media only screen
+  and (min-device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	  .mediaQuery;
+}

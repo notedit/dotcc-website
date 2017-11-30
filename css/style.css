@@ -1,0 +1,524 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+author: valdanito
+time:2016-06-29
+*/
+/*Colors*/
+/*Imgs*/
+/*Fonts*/
+/*Hide*/
+.hide {
+  display: none;
+}
+/*Layout*/
+html,
+body {
+  height: 100%;
+}
+.fl {
+  float: left;
+}
+/*Style*/
+body {
+  font-family: PingFangSC-Light, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 1.62em;
+}
+h1 {
+  font-family: PingFangSC-Semibold, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+#main {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  min-height: 550px;
+  max-height: 715px;
+  background: url("../imgs/bgO@2x.png") center 170% no-repeat #f8f8f8;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 284px 378px;
+  -moz-background-size: 284px 378px;
+  background-size: 284px 378px;
+  /*END intro*/
+
+  /*END iphoneBg*/
+
+  /*END androidBg*/
+
+}
+#main header {
+  height: 86px;
+  padding: 10px 1em;
+  z-index: 10;
+  position: relative;
+}
+#main header #logo {
+  display: block;
+  width: 224px;
+  height: 86px;
+  text-indent: -9999px;
+  background: url("../imgs/logo@2x.png") 0 0 no-repeat transparent;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 224px 86px;
+  -moz-background-size: 224px 86px;
+  background-size: 224px 86px;
+}
+#main header p {
+  line-height: 86px;
+  color: #9b9b9b;
+  font-family: PingFangSC-Light, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+#main .intro {
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  margin-left: -300px;
+  text-align: center;
+}
+#main .intro .title {
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+#main .intro .slogan {
+  font-family: PingFangSC-Thin, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #353535;
+}
+#main .iphoneBg {
+  z-index: 1;
+  position: absolute;
+  width: 716px;
+  height: 444px;
+  left: 50%;
+  margin-left: -910px;
+  top: 200px;
+  background: url("../imgs/iphoneBg@2x.png") 0 0 no-repeat transparent;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 716px 444px;
+  -moz-background-size: 716px 444px;
+  background-size: 716px 444px;
+}
+@keyframes cloudI {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 65px;
+  }
+}
+#main .iphoneBg:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 65px;
+  right: 280px;
+  width: 122px;
+  height: 74px;
+  background: url("../imgs/iphoneCloud@2x.png") 0 0 no-repeat;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 122px 74px;
+  -moz-background-size: 122px 74px;
+  background-size: 122px 74px;
+  -webkit-animation: cloudI 3s linear 0s infinite alternate;
+  -moz-animation: cloudI 3s linear 0s infinite alternate;
+  animation: cloudI 3s linear 0s infinite alternate;
+}
+#main .androidBg {
+  z-index: 1;
+  position: absolute;
+  width: 610px;
+  height: 456px;
+  left: 50%;
+  margin-left: 55px;
+  top: -60px;
+  background: url("../imgs/androidBg@2x.png") 0 0 no-repeat transparent;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 610px 456px;
+  -moz-background-size: 610px 456px;
+  background-size: 610px 456px;
+}
+@keyframes cloudA {
+  from {
+    top: 90px;
+  }
+  to {
+    top: 110px;
+  }
+}
+#main .androidBg:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 90px;
+  right: 120px;
+  width: 114px;
+  height: 61px;
+  background: url("../imgs/androidCloud@2x.png") 0 0 no-repeat;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 114px 61px;
+  -moz-background-size: 114px 61px;
+  background-size: 114px 61px;
+  -webkit-animation: cloudA 3s linear 1s infinite alternate;
+  -moz-animation: cloudA 3s linear 1s infinite alternate;
+  animation: cloudA 3s linear 1s infinite alternate;
+}
+/*END main*/
+#content {
+  position: relative;
+  max-width: 960px;
+  height: 480px;
+  margin: 0 auto;
+  /*END featureList*/
+
+}
+#content ul.featuresList {
+  overflow: hidden;
+  width: 100%;
+  margin: 80px 0 80px;
+  /*END li*/
+
+}
+#content ul.featuresList li {
+  width: 25%;
+  display: block;
+  float: left;
+  text-align: center;
+  padding-top: 70px;
+}
+#content ul.featuresList li h3 {
+  font-family: PingFangSC-Medium, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0.5em;
+}
+#content ul.featuresList li p {
+  font-family: PingFangSC-Light, PingFang SC, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, STXihei, Microsoft Yahei, Microsoft Jhenghei, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  padding: 0 15px;
+  color: #353535;
+  line-height: 1.5em;
+}
+#content ul.featuresList li.l1 {
+  background: url("../imgs/iconBolt@2x.png") center 0 no-repeat;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 56px 32px;
+  -moz-background-size: 56px 32px;
+  background-size: 56px 32px;
+}
+#content ul.featuresList li.l2 {
+  background: url("../imgs/iconPlatform@2x.png") center 0 no-repeat;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 56px 32px;
+  -moz-background-size: 56px 32px;
+  background-size: 56px 32px;
+}
+#content ul.featuresList li.l3 {
+  background: url("../imgs/iconRocket@2x.png") center 0 no-repeat;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 56px 32px;
+  -moz-background-size: 56px 32px;
+  background-size: 56px 32px;
+}
+#content ul.featuresList li.l4 {
+  background: url("../imgs/iconCloud@2x.png") center 0 no-repeat;
+  /*背景图像尺寸*/
+
+  -webkit-background-size: 56px 32px;
+  -moz-background-size: 56px 32px;
+  background-size: 56px 32px;
+}
+#content a.applyBtn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 185px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+#content a.applyBtn:hover {
+  background-color: #353535;
+}
+#content footer {
+  width: 100%;
+  text-align: center;
+  color: #9b9b9b;
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+}
+/*END content*/
+/*mediaQuery*/
+.mediaQuery {
+  /*END main*/
+
+  /*END content*/
+
+}
+.mediaQuery #main {
+  min-height: 480px;
+  max-height: 640px;
+  background-position: center 300px;
+  /*END intro*/
+
+}
+.mediaQuery #main header {
+  position: absolute;
+  z-index: 5;
+  padding: 0;
+}
+.mediaQuery #main .intro {
+  width: 90%;
+  position: inherit;
+  left: inherit;
+  top: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+.mediaQuery #main .intro .title {
+  font-size: 30px;
+  margin-bottom: 0.2em;
+}
+.mediaQuery #main .intro .slogan {
+  font-size: 14px;
+}
+.mediaQuery #main .iphoneBg,
+.mediaQuery #main .androidBg {
+  display: none;
+}
+.mediaQuery #content {
+  height: auto;
+}
+.mediaQuery #content ul.featuresList {
+  margin: 30px 0 20px;
+}
+.mediaQuery #content ul.featuresList li {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.mediaQuery #content ul.featuresList li p {
+  font-size: 12px;
+}
+.mediaQuery #content footer {
+  width: 90%;
+  position: inherit;
+  bottom: inherit;
+  margin: 0 auto;
+  padding: 50px 0 30px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+/*END mediaQuery*/
+/*Responsive*/
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #main {
+    min-height: 480px;
+    max-height: 640px;
+    background-position: center 300px;
+    /*END intro*/
+  
+  }
+  #main header {
+    position: absolute;
+    z-index: 5;
+    padding: 0;
+  }
+  #main .intro {
+    width: 90%;
+    position: inherit;
+    left: inherit;
+    top: 35%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #main .intro .title {
+    font-size: 30px;
+    margin-bottom: 0.2em;
+  }
+  #main .intro .slogan {
+    font-size: 14px;
+  }
+  #main .iphoneBg,
+  #main .androidBg {
+    display: none;
+  }
+  /*END main*/
+  #content {
+    height: auto;
+  }
+  #content ul.featuresList {
+    margin: 30px 0 20px;
+  }
+  #content ul.featuresList li {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f8f8f8;
+  }
+  #content ul.featuresList li p {
+    font-size: 12px;
+  }
+  #content footer {
+    width: 90%;
+    position: inherit;
+    bottom: inherit;
+    margin: 0 auto;
+    padding: 50px 0 30px;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  /*END content*/
+}
